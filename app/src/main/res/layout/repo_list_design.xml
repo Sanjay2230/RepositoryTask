@@ -10,39 +10,39 @@
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:src="@drawable/square"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
+        style="@style/TextView.Style.descText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        style="@style/TextView.Style.descText"
         android:text="@string/square"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title"
+        style="@style/TextView.Style.titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        style="@style/TextView.Style.titleText"
         android:text="bionic"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/desc"
+        style="@style/TextView.Style.descText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
-        style="@style/TextView.Style.descText"
         android:text="A Swift and kotlin library for making composable state machines, and UIs driven by those state machines."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/title"
