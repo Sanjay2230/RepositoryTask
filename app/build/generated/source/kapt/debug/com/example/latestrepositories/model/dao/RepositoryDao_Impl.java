@@ -106,7 +106,7 @@ public final class RepositoryDao_Impl implements RepositoryDao {
   }
 
   @Override
-  public void insert(final List<Repositories> cats) {
+  public void insert(final Repositories cats) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
@@ -128,6 +128,44 @@ public final class RepositoryDao_Impl implements RepositoryDao {
     } finally {
       __db.endTransaction();
       __preparedStmtOfDeleteAll.release(_stmt);
+    }
+  }
+
+  @Override
+  public int isRecordExists(final String author, final String name, final String lang) {
+    final String _sql = "Select Count(*) From RepositoryTable Where Author=? AND Name=? AND Language=?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 3);
+    int _argIndex = 1;
+    if (author == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, author);
+    }
+    _argIndex = 2;
+    if (name == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, name);
+    }
+    _argIndex = 3;
+    if (lang == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, lang);
+    }
+    __db.assertNotSuspendingTransaction();
+    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+    try {
+      final int _result;
+      if(_cursor.moveToFirst()) {
+        _result = _cursor.getInt(0);
+      } else {
+        _result = 0;
+      }
+      return _result;
+    } finally {
+      _cursor.close();
+      _statement.release();
     }
   }
 

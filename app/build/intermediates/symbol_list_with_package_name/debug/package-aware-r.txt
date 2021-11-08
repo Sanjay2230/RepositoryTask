@@ -1793,6 +1793,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable back_icon
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1802,12 +1803,15 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable circle
+drawable cursor_design
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable divider
+drawable ic_baseline_clear_24
+drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2034,6 +2038,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id error
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2194,6 +2199,7 @@ id ratio
 id rectangles
 id refreshLayout
 id repo_list
+id retry
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2217,6 +2223,7 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_id
 id search_mag_icon
 id search_plate
 id search_src_text
@@ -2494,6 +2501,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu example_menu
 menu example_menu2
+menu menu_repo
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -2524,6 +2532,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_search
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2595,11 +2604,13 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string netword_issue
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string retry
 string search_menu_title
 string square
 string status_bar_notification_info_overflow
@@ -3001,7 +3012,7 @@ style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
 style TextInputEditText
 style TextView_Style_descText
-style TextView_Style_squareText
+style TextView_Style_errorText
 style TextView_Style_titleText
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
@@ -3481,6 +3492,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml searchable
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

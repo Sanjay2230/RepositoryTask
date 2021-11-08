@@ -10,9 +10,9 @@
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/open_sans</item>
         <item name="android:textColor">@color/black</item>
     </style>
-    <style name="TextView.Style.squareText" parent="android:Widget.TextView">
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/open_sans_semibold</item>
+    <style name="TextView.Style.errorText" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/open_sans_bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 </resources>

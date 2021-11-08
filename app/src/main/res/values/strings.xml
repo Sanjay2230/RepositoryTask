@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Latest Repositories</string>
     <string name="square">square</string>
+    <string name="action_search">Search</string>
+    <string name="netword_issue">No network connection</string>
+    <string name="retry">TRY AGAIN</string>
     <string name="trend_repo">Trending Repositories</string>
 </resources>

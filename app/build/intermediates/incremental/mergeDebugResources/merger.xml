@@ -7699,6 +7699,7 @@
         
     </style><style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textSize">20sp</item>
+        <item name="android:homeAsUpIndicator">@drawable/back_icon</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/open_sans_bold</item>
         <item name="android:textStyle">bold</item>
@@ -7747,7 +7748,7 @@
         <item name="autoCompleteTextViewStyle">@style/AutoComplete</item>
         <item name="android:windowContentTransitions" ns2:targetApi="lollipop">true</item>
 
-    </style></file><file path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Latest Repositories</string><string name="square">square</string><string name="trend_repo">Trending Repositories</string></file><file path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/values/styles.xml" qualifiers=""><style name="TextView.Style.titleText" parent="android:Widget.TextView">
+    </style></file><file path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">Latest Repositories</string><string name="square">square</string><string name="trend_repo">Trending Repositories</string><string name="action_search">Search</string><string name="netword_issue">No network connection</string><string name="retry">TRY AGAIN</string></file><file path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/values/styles.xml" qualifiers=""><style name="TextView.Style.titleText" parent="android:Widget.TextView">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily" ns2:targetApi="jelly_bean">@font/open_sans_bold</item>
         <item name="android:textColor">@color/black</item>
@@ -7755,9 +7756,9 @@
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily" ns2:targetApi="jelly_bean">@font/open_sans</item>
         <item name="android:textColor">@color/black</item>
-    </style><style name="TextView.Style.squareText" parent="android:Widget.TextView">
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily" ns2:targetApi="jelly_bean">@font/open_sans_semibold</item>
+    </style><style name="TextView.Style.errorText" parent="android:Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily" ns2:targetApi="jelly_bean">@font/open_sans_bold</item>
         <item name="android:textColor">@color/black</item>
     </style></file><file path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/values/font_certs.xml" qualifiers=""><array name="com_google_android_gms_fonts_certs">
         <item>@array/com_google_android_gms_fonts_certs_dev</item>
@@ -7796,7 +7797,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
-    </style></file></source><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/build/generated/res/rs/debug"/><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file name="ic_baseline_search_24" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/drawable/ic_baseline_search_24.xml" qualifiers="" type="drawable"/><file name="menu_repo" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/menu/menu_repo.xml" qualifiers="" type="menu"/><file name="searchable" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/xml/searchable.xml" qualifiers="" type="xml"/><file name="cursor_design" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/drawable/cursor_design.xml" qualifiers="" type="drawable"/><file name="ic_baseline_clear_24" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/drawable/ic_baseline_clear_24.xml" qualifiers="" type="drawable"/><file name="back_icon" path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/main/res/drawable/back_icon.xml" qualifiers="" type="drawable"/></source><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/build/generated/res/rs/debug"/><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>
