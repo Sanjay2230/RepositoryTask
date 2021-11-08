@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Latest Repositories</string>
     <string name="square">square</string>
+    <string name="trend_repo">Trending Repositories</string>
 </resources>

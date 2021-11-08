@@ -882,6 +882,7 @@ int attr suffixText 0x7f030332
 int attr suffixTextAppearance 0x7f030333
 int attr suffixTextColor 0x7f030334
 int attr suggestionRowLayout 0x7f030335
+int attr swipeRefreshLayoutProgressSpinnerBackgroundColor 0x7f0303e3
 int attr switchMinWidth 0x7f030336
 int attr switchPadding 0x7f030337
 int attr switchStyle 0x7f030338
@@ -1092,6 +1093,20 @@ int color background_floating_material_light 0x7f05001e
 int color background_material_dark 0x7f05001f
 int color background_material_light 0x7f050020
 int color black 0x7f050021
+int color blue_100 0x7f0500d7
+int color blue_200 0x7f0500d8
+int color blue_300 0x7f0500d9
+int color blue_400 0x7f0500da
+int color blue_50 0x7f0500db
+int color blue_500 0x7f0500dc
+int color blue_600 0x7f0500dd
+int color blue_700 0x7f0500de
+int color blue_800 0x7f0500df
+int color blue_900 0x7f0500e0
+int color blue_A100 0x7f0500e1
+int color blue_A200 0x7f0500e2
+int color blue_A400 0x7f0500e3
+int color blue_A700 0x7f0500e4
 int color bright_foreground_disabled_material_dark 0x7f050022
 int color bright_foreground_disabled_material_light 0x7f050023
 int color bright_foreground_inverse_material_dark 0x7f050024
@@ -1151,6 +1166,7 @@ int color error_color_material_dark 0x7f050059
 int color error_color_material_light 0x7f05005a
 int color foreground_material_dark 0x7f05005b
 int color foreground_material_light 0x7f05005c
+int color grey_10 0x7f0500e5
 int color grey_101 0x7f0500d5
 int color grey_300 0x7f0500d6
 int color highlighted_text_material_dark 0x7f05005d
@@ -2169,11 +2185,13 @@ int id percent 0x7f080141
 int id pin 0x7f080142
 int id position 0x7f080143
 int id postLayout 0x7f080144
+int id progress 0x7f0801df
 int id progress_circular 0x7f080145
 int id progress_horizontal 0x7f080146
 int id radio 0x7f080147
 int id ratio 0x7f080148
 int id rectangles 0x7f080149
+int id refreshLayout 0x7f0801de
 int id repo_list 0x7f0801da
 int id reverseSawtooth 0x7f08014a
 int id right 0x7f08014b
@@ -2285,6 +2303,7 @@ int id title 0x7f0801b1
 int id titleDividerNoCustom 0x7f0801b2
 int id title_template 0x7f0801b3
 int id toggle 0x7f0801b4
+int id toolbar 0x7f0801e0
 int id top 0x7f0801b5
 int id topPanel 0x7f0801b6
 int id touch_outside 0x7f0801b7
@@ -2386,6 +2405,7 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
+int layout content_activity_main 0x7f0b0072
 int layout custom_dialog 0x7f0b001d
 int layout design_bottom_navigation_item 0x7f0b001e
 int layout design_bottom_sheet_dialog 0x7f0b001f
@@ -2582,6 +2602,7 @@ int string path_password_strike_through 0x7f0f0066
 int string search_menu_title 0x7f0f0067
 int string square 0x7f0f0069
 int string status_bar_notification_info_overflow 0x7f0f0068
+int string trend_repo 0x7f0f006a
 int style AlertDialog_AppCompat 0x7f100000
 int style AlertDialog_AppCompat_Light 0x7f100001
 int style AndroidThemeColorAccentYellow 0x7f100002
@@ -2590,6 +2611,11 @@ int style Animation_AppCompat_DropDownUp 0x7f100004
 int style Animation_AppCompat_Tooltip 0x7f100005
 int style Animation_Design_BottomSheetDialog 0x7f100006
 int style Animation_MaterialComponents_BottomSheetDialog 0x7f100007
+int style AppTheme 0x7f1002d7
+int style AppTheme_AppBarOverlay 0x7f1002d5
+int style AppTheme_NoActionBar 0x7f1002db
+int style AppTheme_PopupOverlay 0x7f1002d6
+int style AutoComplete 0x7f1002d8
 int style Base_AlertDialog_AppCompat 0x7f100008
 int style Base_AlertDialog_AppCompat_Light 0x7f100009
 int style Base_Animation_AppCompat_Dialog 0x7f10000a
@@ -2855,6 +2881,7 @@ int style RtlOverlay_Widget_AppCompat_Search_DropDown_Text 0x7f10010d
 int style RtlOverlay_Widget_AppCompat_SearchView_MagIcon 0x7f10010e
 int style RtlUnderlay_Widget_AppCompat_ActionButton 0x7f10010f
 int style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow 0x7f100110
+int style SearchViewStyle 0x7f1002d9
 int style ShapeAppearance_MaterialComponents 0x7f100111
 int style ShapeAppearance_MaterialComponents_LargeComponent 0x7f100112
 int style ShapeAppearance_MaterialComponents_MediumComponent 0x7f100113
@@ -2971,6 +2998,7 @@ int style TextAppearance_MaterialComponents_Tooltip 0x7f100181
 int style TextAppearance_Widget_AppCompat_ExpandedMenu_Item 0x7f100182
 int style TextAppearance_Widget_AppCompat_Toolbar_Subtitle 0x7f100183
 int style TextAppearance_Widget_AppCompat_Toolbar_Title 0x7f100184
+int style TextInputEditText 0x7f1002da
 int style TextView_Style_descText 0x7f1002d2
 int style TextView_Style_squareText 0x7f1002d3
 int style TextView_Style_titleText 0x7f1002d4
@@ -4943,6 +4971,8 @@ int[] styleable StateListDrawableItem { 0x01010199 }
 int styleable StateListDrawableItem_android_drawable 0
 int[] styleable StateSet { 0x7f030120 }
 int styleable StateSet_defaultState 0
+int[] styleable SwipeRefreshLayout { 0x7f0303e3 }
+int styleable SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor 0
 int[] styleable SwitchCompat { 0x01010124, 0x01010125, 0x01010142, 0x7f030303, 0x7f030312, 0x7f030336, 0x7f030337, 0x7f030339, 0x7f03038d, 0x7f03038e, 0x7f03038f, 0x7f0303b0, 0x7f0303b7, 0x7f0303b8 }
 int styleable SwitchCompat_android_textOn 0
 int styleable SwitchCompat_android_textOff 1

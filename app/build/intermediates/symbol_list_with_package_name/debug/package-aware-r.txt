@@ -883,6 +883,7 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -1093,6 +1094,20 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue_100
+color blue_200
+color blue_300
+color blue_400
+color blue_50
+color blue_500
+color blue_600
+color blue_700
+color blue_800
+color blue_900
+color blue_A100
+color blue_A200
+color blue_A400
+color blue_A700
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1152,6 +1167,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey_10
 color grey_101
 color grey_300
 color highlighted_text_material_dark
@@ -2170,11 +2186,13 @@ id percent
 id pin
 id position
 id postLayout
+id progress
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
+id refreshLayout
 id repo_list
 id reverseSawtooth
 id right
@@ -2286,6 +2304,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -2387,6 +2406,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout content_activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2583,6 +2603,7 @@ string path_password_strike_through
 string search_menu_title
 string square
 string status_bar_notification_info_overflow
+string trend_repo
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -2591,6 +2612,11 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_NoActionBar
+style AppTheme_PopupOverlay
+style AutoComplete
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -2856,6 +2882,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style SearchViewStyle
 style ShapeAppearance_MaterialComponents
 style ShapeAppearance_MaterialComponents_LargeComponent
 style ShapeAppearance_MaterialComponents_MediumComponent
@@ -2972,6 +2999,7 @@ style TextAppearance_MaterialComponents_Tooltip
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style TextInputEditText
 style TextView_Style_descText
 style TextView_Style_squareText
 style TextView_Style_titleText
@@ -3432,6 +3460,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

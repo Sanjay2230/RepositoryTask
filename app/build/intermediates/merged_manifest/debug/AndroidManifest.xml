@@ -16,13 +16,20 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
         android:testOnly="true"
-        android:theme="@style/Theme.LatestRepositories" >
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.example.latestrepositories.view.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:label="@string/trend_repo"
+            android:parentActivityName="com.example.latestrepositories.view.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

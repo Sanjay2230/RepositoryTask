@@ -7,7 +7,8 @@
         <entry key="app/src/main/res/drawable/divider.xml" value="0.25092592592592594" />
         <entry key="app/src/main/res/font-v26/fontresourcefile.xml" value="0.26944444444444443" />
         <entry key="app/src/main/res/font/fontresourcefile.xml" value="0.30520833333333336" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12006079027355623" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/content_activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/repo_list_design.xml" value="0.33" />
       </map>
     </option>
