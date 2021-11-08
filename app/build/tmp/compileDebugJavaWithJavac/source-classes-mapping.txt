@@ -1,0 +1,10 @@
+com/example/latestrepositories/model/dao/RepositoryDao_Impl.java
+ com.example.latestrepositories.model.dao.RepositoryDao_Impl
+ com.example.latestrepositories.model.dao.RepositoryDao_Impl$1
+ com.example.latestrepositories.model.dao.RepositoryDao_Impl$2
+ com.example.latestrepositories.model.dao.RepositoryDao_Impl$3
+com/example/latestrepositories/BuildConfig.java
+ com.example.latestrepositories.BuildConfig
+com/example/latestrepositories/database/RoomDB_Impl.java
+ com.example.latestrepositories.database.RoomDB_Impl
+ com.example.latestrepositories.database.RoomDB_Impl$1
