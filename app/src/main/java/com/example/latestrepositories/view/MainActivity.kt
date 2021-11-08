@@ -42,23 +42,5 @@ class MainActivity : AppCompatActivity() {
                 Log.d("main", "onFailure: " + t.message)
             }
         })
-        /*val retrofit = Retrofit.Builder()
-            .baseUrl("https://private-anon-930362c58b-githubtrendingapi.apiary-mock.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val api: ApiInterface = ApiInterface.create().getRepoList()
-        val call: Call<List<Repositories>> = api.getRepoList()
-        call.enqueue(object : Callback<List<Repositories>> {
-            override fun onResponse(call: Call<List<Repositories>>, response: Response<List<Repositories>>) {
-                if (response.isSuccessful) {
-//                    repository.insert(response.body())
-                    Log.d("Response", "OnScuccess: " + response.message())
-                }
-            }
-
-            override fun onFailure(call: Call<List<Repositories>>, t: Throwable) {
-                Log.d("main", "onFailure: " + t.message)
-            }
-        })*/
     }
 }
