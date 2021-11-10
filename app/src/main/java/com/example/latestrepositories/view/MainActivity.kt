@@ -34,9 +34,13 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.view.MenuItemCompat
 import androidx.core.widget.doAfterTextChanged
+import androidx.recyclerview.widget.RecyclerView
+import com.example.latestrepositories.utils.RecyclerViewPagination
 import com.example.latestrepositories.utils.Utils
 import com.example.latestrepositories.utils.goneView
 import com.example.latestrepositories.utils.showView
+import org.json.JSONArray
+import org.json.JSONObject
 
 
 class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
@@ -99,13 +103,16 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
                     refreshLayout.isRefreshing = false
                     Log.d("Response", "OnScuccess: " + response.message())
                     Log.d("Response", "OnScuccess: " + response.body().toString())
-                    val repolist = response.body()
-                    repolist?.forEach { it ->
+                    val jsonObj = JSONObject(response.body().toString())
+                    val obj = jsonObj.getJSONObject("items")
+                    val repolist = obj
+                    repositoryViewModel.insert(it)
+                    /*repolist?.forEach { it ->
                         val isExists = repositoryViewModel.isRecordExists(it.author!!, it.name!!, it.language!!)
                         if(isExists == 0){
                             repositoryViewModel.insert(it)
                         }
-                    }
+                    }*/
                 }
             }
 

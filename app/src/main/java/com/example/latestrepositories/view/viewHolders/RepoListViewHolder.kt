@@ -7,6 +7,7 @@ import com.example.latestrepositories.model.entity.Repositories
 import android.graphics.drawable.Drawable
 import android.graphics.Color
 import android.graphics.PorterDuff
+import android.graphics.drawable.GradientDrawable
 
 import android.graphics.drawable.ShapeDrawable
 import androidx.appcompat.widget.AppCompatImageView
@@ -24,6 +25,9 @@ class RepoListViewHolder(v: View):RecyclerView.ViewHolder(v) {
         desc.text = obj.description
         lang.text = obj.language
         starCount.text = obj.stars.toString()
+        val drawable = itemView.context.resources.getDrawable(R.drawable.circle) as GradientDrawable
+        drawable.setColor(Color.parseColor(obj.languageColor))
+        langColor.setImageDrawable(drawable)
 //        langColor.background.setColorFilter(Color.parseColor("#343434"), PorterDuff.Mode.SRC_ATOP)
 //        val background: Drawable = langColor.background
 //        val shapeDrawable = background as ShapeDrawable

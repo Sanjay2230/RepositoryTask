@@ -1,16 +1,19 @@
 package com.example.latestrepositories.networks
 
+import android.app.Application
 import com.example.latestrepositories.model.entity.Repositories
+import okhttp3.Cache
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import java.io.File
 
 
 interface ApiInterface {
 
     companion object{
-        val Base_url = "https://private-anon-930362c58b-githubtrendingapi.apiary-mock.com/"
+        val Base_url = "https://api.github.com/"
         fun create() : ApiInterface {
 
             val retrofit = Retrofit.Builder()
@@ -21,6 +24,6 @@ interface ApiInterface {
 
         }
     }
-    @GET("repositories?language=kotlin&since=daily&spoken_language_code=en")
+    @GET("search/repositories?q=q")
     fun getRepoList(): Call<List<Repositories>>
 }

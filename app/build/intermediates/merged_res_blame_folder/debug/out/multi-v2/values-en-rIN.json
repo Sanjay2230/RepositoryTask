@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/sanjay1/AndroidStudioProjects/LatestRepositories/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
                     "source": "/home/sanjay1/.gradle/caches/transforms-3/4dfd8b15aa3fca473e5152361f0f3dea/transformed/core-1.7.0/res/values-en-rIN/values-en-rIN.xml",
