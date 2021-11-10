@@ -9,31 +9,30 @@ import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "RepositoryTable")
 data class Repositories(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @NonNull
-    var id: Int? = null,
-    @SerializedName("author")
-    @ColumnInfo(name = "Author") var author:String? = null,
+    @SerializedName("id")
+    @ColumnInfo(name = "ID") var id: Int? = null,
+    @SerializedName("node_id")
+    @ColumnInfo(name = "Node_Id") var node_id:String? = null,
     @SerializedName("name")
     @ColumnInfo(name = "Name") var name:String? = null,
-    @SerializedName("avatar")
-    @ColumnInfo(name = "Avatar") var avatar:String? = null,
-    @SerializedName("url")
-    @ColumnInfo(name = "Url") var url:String? = null,
+    @SerializedName("full_name")
+    @ColumnInfo(name = "Full_Name") var full_name:String? = null,
+    @SerializedName("html_url")
+    @ColumnInfo(name = "Html_Url") var html_url:String? = null,
     @SerializedName("description")
     @ColumnInfo(name = "Description") var description:String? = null,
-    @SerializedName("language")
-    @ColumnInfo(name = "Language") var language:String? = null,
-    @SerializedName("languageColor")
-    @ColumnInfo(name = "LanguageColor") var languageColor:String? = null,
-    @SerializedName("stars")
-    @ColumnInfo(name = "Stars") var stars:Int? = null,
-    @SerializedName("forks")
-    @ColumnInfo(name = "Forks") var forks:Int? = null,
-    @SerializedName("currentPeriodStars")
-    @ColumnInfo(name = "CurrentPeriodStars") var currentPeriodStars:Int? = null,
-    @SerializedName("builtBy")
-//    @ColumnInfo(name = "BuiltUserId") val builtUserId:Int? = null,
-
-    @Ignore var builtBy: List<BuiltBy>? = null
+    @SerializedName("fork")
+    @ColumnInfo(name = "Fork") var fork:Boolean? = null,
+    @SerializedName("url")
+    @ColumnInfo(name = "Url") var url:String? = null,
+    @SerializedName("statuses_url")
+    @ColumnInfo(name = "Status_Url") var statuses_url:String? = null,
+    @SerializedName("languages_url")
+    @ColumnInfo(name = "Langugage_Url") var languages_url:String? = null,
+    @SerializedName("stargazers_url")
+    @ColumnInfo(name = "Stargazers_Url") var stargazers_url:String? = null,
+    @SerializedName("downloads_url")
+    @ColumnInfo(name = "Downloads_url") var downloads_url:String? = null
 )

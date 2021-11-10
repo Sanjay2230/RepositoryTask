@@ -12,6 +12,7 @@ MERGED from [androidx.appcompat:appcompat:1.3.1] /home/sanjay1/.gradle/caches/tr
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/sanjay1/.gradle/caches/transforms-3/5c2f68717292f3691a744effbfe1f6ae/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/8c2bed1851e784a59bccb6f16b58fd3c/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:17:1-31:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /home/sanjay1/.gradle/caches/transforms-3/978598f898263767f2a9989b23c487c4/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/sanjay1/.gradle/caches/transforms-3/93a46ec76b5dbff36cd15eef62f6695c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] /home/sanjay1/.gradle/caches/transforms-3/798cfbf5c4e6d531e7ee2fb1e3e48321/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] /home/sanjay1/.gradle/caches/transforms-3/37fd7562e6b0ddaaa35a21781854ae1d/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
@@ -167,6 +168,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/sanjay1/.gradl
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/8c2bed1851e784a59bccb6f16b58fd3c/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /home/sanjay1/.gradle/caches/transforms-3/978598f898263767f2a9989b23c487c4/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.0] /home/sanjay1/.gradle/caches/transforms-3/978598f898263767f2a9989b23c487c4/transformed/jetified-rxandroid-2.1.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/sanjay1/.gradle/caches/transforms-3/93a46ec76b5dbff36cd15eef62f6695c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/sanjay1/.gradle/caches/transforms-3/93a46ec76b5dbff36cd15eef62f6695c/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] /home/sanjay1/.gradle/caches/transforms-3/798cfbf5c4e6d531e7ee2fb1e3e48321/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41

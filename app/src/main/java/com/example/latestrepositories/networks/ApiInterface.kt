@@ -7,6 +7,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 import java.io.File
 
 
@@ -24,6 +25,6 @@ interface ApiInterface {
 
         }
     }
-    @GET("search/repositories?q=q")
-    fun getRepoList(): Call<List<Repositories>>
+    @GET("repositories?q=q")
+    fun getRepoList(@Query("since") lastId:Int): Call<List<Repositories>>
 }

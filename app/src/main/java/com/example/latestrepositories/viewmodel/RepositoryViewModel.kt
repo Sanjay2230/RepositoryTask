@@ -13,12 +13,8 @@ import kotlinx.coroutines.withContext
 class RepositoryViewModel(application: Application):AndroidViewModel(application) {
     private val db: RoomDB = RoomDB.getInstance(application)
 
-    fun insert(list:Repositories){
+    fun insert(list:List<Repositories>){
         return db.repositoryDao().insert(list)
-    }
-
-    fun isRecordExists(author:String, name:String, lang:String):Int{
-        return db.repositoryDao().isRecordExists(author, name, lang)
     }
 
     fun getRepoList(onSuccess:(listRepo:LiveData<List<Repositories>>) -> Unit){

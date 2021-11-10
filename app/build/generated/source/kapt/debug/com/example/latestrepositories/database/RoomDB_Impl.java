@@ -35,9 +35,9 @@ public final class RoomDB_Impl extends RoomDB {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `RepositoryTable` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `Author` TEXT, `Name` TEXT, `Avatar` TEXT, `Url` TEXT, `Description` TEXT, `Language` TEXT, `LanguageColor` TEXT, `Stars` INTEGER, `Forks` INTEGER, `CurrentPeriodStars` INTEGER)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `RepositoryTable` (`ID` INTEGER, `Node_Id` TEXT, `Name` TEXT, `Full_Name` TEXT, `Html_Url` TEXT, `Description` TEXT, `Fork` INTEGER, `Url` TEXT, `Status_Url` TEXT, `Langugage_Url` TEXT, `Stargazers_Url` TEXT, `Downloads_url` TEXT, PRIMARY KEY(`ID`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '86f93d4d082e1be5a08ca33deda5e666')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2988cf0694b7ec52f70fc519e7325cec')");
       }
 
       @Override
@@ -81,18 +81,19 @@ public final class RoomDB_Impl extends RoomDB {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsRepositoryTable = new HashMap<String, TableInfo.Column>(11);
-        _columnsRepositoryTable.put("id", new TableInfo.Column("id", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Author", new TableInfo.Column("Author", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsRepositoryTable = new HashMap<String, TableInfo.Column>(12);
+        _columnsRepositoryTable.put("ID", new TableInfo.Column("ID", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Node_Id", new TableInfo.Column("Node_Id", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRepositoryTable.put("Name", new TableInfo.Column("Name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Avatar", new TableInfo.Column("Avatar", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Url", new TableInfo.Column("Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Full_Name", new TableInfo.Column("Full_Name", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Html_Url", new TableInfo.Column("Html_Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsRepositoryTable.put("Description", new TableInfo.Column("Description", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Language", new TableInfo.Column("Language", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("LanguageColor", new TableInfo.Column("LanguageColor", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Stars", new TableInfo.Column("Stars", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("Forks", new TableInfo.Column("Forks", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsRepositoryTable.put("CurrentPeriodStars", new TableInfo.Column("CurrentPeriodStars", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Fork", new TableInfo.Column("Fork", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Url", new TableInfo.Column("Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Status_Url", new TableInfo.Column("Status_Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Langugage_Url", new TableInfo.Column("Langugage_Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Stargazers_Url", new TableInfo.Column("Stargazers_Url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsRepositoryTable.put("Downloads_url", new TableInfo.Column("Downloads_url", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysRepositoryTable = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesRepositoryTable = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoRepositoryTable = new TableInfo("RepositoryTable", _columnsRepositoryTable, _foreignKeysRepositoryTable, _indicesRepositoryTable);
@@ -104,7 +105,7 @@ public final class RoomDB_Impl extends RoomDB {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "86f93d4d082e1be5a08ca33deda5e666", "20f0c76aeab75b4b2438e518f0f43fed");
+    }, "2988cf0694b7ec52f70fc519e7325cec", "18d59e92371206e06f48ebf52c124cd5");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

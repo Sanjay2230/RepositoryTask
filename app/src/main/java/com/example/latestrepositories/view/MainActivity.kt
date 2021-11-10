@@ -49,6 +49,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
     private lateinit var repoListAdapter: RepoListAdapter
     private lateinit var repoList: ArrayList<Repositories>
     private lateinit var searchView: androidx.appcompat.widget.SearchView
+    val currentInt = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -93,7 +94,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
     }
 
     private fun networkCall(){
-        val apiInterface = ApiInterface.create().getRepoList()
+        val apiInterface = ApiInterface.create().getRepoList(currentInt)
         apiInterface.enqueue(object : Callback<List<Repositories>> {
             override fun onResponse(call: Call<List<Repositories>>, response: Response<List<Repositories>>) {
                 if (response.isSuccessful) {
@@ -103,10 +104,10 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
                     refreshLayout.isRefreshing = false
                     Log.d("Response", "OnScuccess: " + response.message())
                     Log.d("Response", "OnScuccess: " + response.body().toString())
-                    val jsonObj = JSONObject(response.body().toString())
-                    val obj = jsonObj.getJSONObject("items")
-                    val repolist = obj
-                    repositoryViewModel.insert(it)
+//                    val jsonObj = JSONObject(response.body().toString())
+//                    val repoArratObj = jsonObj.getString("items")
+//                    val repolist = JSONArray(repoArratObj)
+                    repositoryViewModel.insert(response.body()!!)
                     /*repolist?.forEach { it ->
                         val isExists = repositoryViewModel.isRecordExists(it.author!!, it.name!!, it.language!!)
                         if(isExists == 0){

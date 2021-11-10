@@ -30,7 +30,7 @@ abstract class RoomDB : RoomDatabase() {
 
         val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
-                database.execSQL("CREATE TABLE IF NOT EXISTS 'RepositoryTable' ('Author' TEXT, 'Name' TEXT, 'Avatar' TEXT, 'Url' TEXT, 'Description' TEXT, 'Language' TEXT, 'LanguageColor' TEXT,'Stars' TEXT,'Forks' TEXT,'CurrentPeriodStars' TEXT)")
+                database.execSQL("CREATE TABLE IF NOT EXISTS 'RepositoryTable' ('ID' INTEGER, 'Node_Id' TEXT, 'Name' TEXT, 'Full_Name' TEXT, 'Html_Url' TEXT, 'Fork' INTEGER, 'Url' TEXT,'Status_Url' TEXT,'Langugage_Url' TEXT,'Stargazers_Url' TEXT,'Downloads_url' TEXT)")
             }
         }
     }

@@ -13,10 +13,7 @@ import com.example.latestrepositories.model.entity.Repositories
 @Dao
 interface RepositoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(cats: Repositories)
-
-    @Query("Select Count(*) From RepositoryTable Where Author=:author AND Name=:name AND Language=:lang")
-    fun isRecordExists(author:String, name:String, lang:String): Int
+    fun insert(cats: List<Repositories>)
 
     @Query("SELECT * FROM RepositoryTable")
     fun getRepoList(): LiveData<List<Repositories>>

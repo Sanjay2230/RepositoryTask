@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="@drawable/circle"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/lang"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/lang" />
@@ -65,9 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
         android:text="Kotlin"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/circle_icon"
         app:layout_constraintTop_toBottomOf="@+id/desc" />
 
@@ -77,6 +78,7 @@
         android:layout_height="15dp"
         android:layout_marginEnd="7dp"
         android:src="@drawable/star"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/star_count"
         app:layout_constraintEnd_toStartOf="@+id/star_count"
         app:layout_constraintTop_toTopOf="@+id/star_count" />
@@ -87,9 +89,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:text="44"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/desc" />
 

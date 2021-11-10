@@ -10,6 +10,7 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.example.latestrepositories.model.entity.Repositories;
+import java.lang.Boolean;
 import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Integer;
@@ -34,7 +35,7 @@ public final class RepositoryDao_Impl implements RepositoryDao {
     this.__insertionAdapterOfRepositories = new EntityInsertionAdapter<Repositories>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `RepositoryTable` (`id`,`Author`,`Name`,`Avatar`,`Url`,`Description`,`Language`,`LanguageColor`,`Stars`,`Forks`,`CurrentPeriodStars`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `RepositoryTable` (`ID`,`Node_Id`,`Name`,`Full_Name`,`Html_Url`,`Description`,`Fork`,`Url`,`Status_Url`,`Langugage_Url`,`Stargazers_Url`,`Downloads_url`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -44,55 +45,62 @@ public final class RepositoryDao_Impl implements RepositoryDao {
         } else {
           stmt.bindLong(1, value.getId());
         }
-        if (value.getAuthor() == null) {
+        if (value.getNode_id() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getAuthor());
+          stmt.bindString(2, value.getNode_id());
         }
         if (value.getName() == null) {
           stmt.bindNull(3);
         } else {
           stmt.bindString(3, value.getName());
         }
-        if (value.getAvatar() == null) {
+        if (value.getFull_name() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getAvatar());
+          stmt.bindString(4, value.getFull_name());
         }
-        if (value.getUrl() == null) {
+        if (value.getHtml_url() == null) {
           stmt.bindNull(5);
         } else {
-          stmt.bindString(5, value.getUrl());
+          stmt.bindString(5, value.getHtml_url());
         }
         if (value.getDescription() == null) {
           stmt.bindNull(6);
         } else {
           stmt.bindString(6, value.getDescription());
         }
-        if (value.getLanguage() == null) {
+        final Integer _tmp;
+        _tmp = value.getFork() == null ? null : (value.getFork() ? 1 : 0);
+        if (_tmp == null) {
           stmt.bindNull(7);
         } else {
-          stmt.bindString(7, value.getLanguage());
+          stmt.bindLong(7, _tmp);
         }
-        if (value.getLanguageColor() == null) {
+        if (value.getUrl() == null) {
           stmt.bindNull(8);
         } else {
-          stmt.bindString(8, value.getLanguageColor());
+          stmt.bindString(8, value.getUrl());
         }
-        if (value.getStars() == null) {
+        if (value.getStatuses_url() == null) {
           stmt.bindNull(9);
         } else {
-          stmt.bindLong(9, value.getStars());
+          stmt.bindString(9, value.getStatuses_url());
         }
-        if (value.getForks() == null) {
+        if (value.getLanguages_url() == null) {
           stmt.bindNull(10);
         } else {
-          stmt.bindLong(10, value.getForks());
+          stmt.bindString(10, value.getLanguages_url());
         }
-        if (value.getCurrentPeriodStars() == null) {
+        if (value.getStargazers_url() == null) {
           stmt.bindNull(11);
         } else {
-          stmt.bindLong(11, value.getCurrentPeriodStars());
+          stmt.bindString(11, value.getStargazers_url());
+        }
+        if (value.getDownloads_url() == null) {
+          stmt.bindNull(12);
+        } else {
+          stmt.bindString(12, value.getDownloads_url());
         }
       }
     };
@@ -106,7 +114,7 @@ public final class RepositoryDao_Impl implements RepositoryDao {
   }
 
   @Override
-  public void insert(final Repositories cats) {
+  public void insert(final List<Repositories> cats) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
@@ -132,44 +140,6 @@ public final class RepositoryDao_Impl implements RepositoryDao {
   }
 
   @Override
-  public int isRecordExists(final String author, final String name, final String lang) {
-    final String _sql = "Select Count(*) From RepositoryTable Where Author=? AND Name=? AND Language=?";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 3);
-    int _argIndex = 1;
-    if (author == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, author);
-    }
-    _argIndex = 2;
-    if (name == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, name);
-    }
-    _argIndex = 3;
-    if (lang == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, lang);
-    }
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _result;
-      if(_cursor.moveToFirst()) {
-        _result = _cursor.getInt(0);
-      } else {
-        _result = 0;
-      }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
-  }
-
-  @Override
   public LiveData<List<Repositories>> getRepoList() {
     final String _sql = "SELECT * FROM RepositoryTable";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
@@ -178,98 +148,96 @@ public final class RepositoryDao_Impl implements RepositoryDao {
       public List<Repositories> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
-          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-          final int _cursorIndexOfAuthor = CursorUtil.getColumnIndexOrThrow(_cursor, "Author");
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "ID");
+          final int _cursorIndexOfNodeId = CursorUtil.getColumnIndexOrThrow(_cursor, "Node_Id");
           final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "Name");
-          final int _cursorIndexOfAvatar = CursorUtil.getColumnIndexOrThrow(_cursor, "Avatar");
-          final int _cursorIndexOfUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Url");
+          final int _cursorIndexOfFullName = CursorUtil.getColumnIndexOrThrow(_cursor, "Full_Name");
+          final int _cursorIndexOfHtmlUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Html_Url");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "Description");
-          final int _cursorIndexOfLanguage = CursorUtil.getColumnIndexOrThrow(_cursor, "Language");
-          final int _cursorIndexOfLanguageColor = CursorUtil.getColumnIndexOrThrow(_cursor, "LanguageColor");
-          final int _cursorIndexOfStars = CursorUtil.getColumnIndexOrThrow(_cursor, "Stars");
-          final int _cursorIndexOfForks = CursorUtil.getColumnIndexOrThrow(_cursor, "Forks");
-          final int _cursorIndexOfCurrentPeriodStars = CursorUtil.getColumnIndexOrThrow(_cursor, "CurrentPeriodStars");
+          final int _cursorIndexOfFork = CursorUtil.getColumnIndexOrThrow(_cursor, "Fork");
+          final int _cursorIndexOfUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Url");
+          final int _cursorIndexOfStatusesUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Status_Url");
+          final int _cursorIndexOfLanguagesUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Langugage_Url");
+          final int _cursorIndexOfStargazersUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Stargazers_Url");
+          final int _cursorIndexOfDownloadsUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "Downloads_url");
           final List<Repositories> _result = new ArrayList<Repositories>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Repositories _item;
-            _item = new Repositories();
             final Integer _tmpId;
             if (_cursor.isNull(_cursorIndexOfId)) {
               _tmpId = null;
             } else {
               _tmpId = _cursor.getInt(_cursorIndexOfId);
             }
-            _item.setId(_tmpId);
-            final String _tmpAuthor;
-            if (_cursor.isNull(_cursorIndexOfAuthor)) {
-              _tmpAuthor = null;
+            final String _tmpNode_id;
+            if (_cursor.isNull(_cursorIndexOfNodeId)) {
+              _tmpNode_id = null;
             } else {
-              _tmpAuthor = _cursor.getString(_cursorIndexOfAuthor);
+              _tmpNode_id = _cursor.getString(_cursorIndexOfNodeId);
             }
-            _item.setAuthor(_tmpAuthor);
             final String _tmpName;
             if (_cursor.isNull(_cursorIndexOfName)) {
               _tmpName = null;
             } else {
               _tmpName = _cursor.getString(_cursorIndexOfName);
             }
-            _item.setName(_tmpName);
-            final String _tmpAvatar;
-            if (_cursor.isNull(_cursorIndexOfAvatar)) {
-              _tmpAvatar = null;
+            final String _tmpFull_name;
+            if (_cursor.isNull(_cursorIndexOfFullName)) {
+              _tmpFull_name = null;
             } else {
-              _tmpAvatar = _cursor.getString(_cursorIndexOfAvatar);
+              _tmpFull_name = _cursor.getString(_cursorIndexOfFullName);
             }
-            _item.setAvatar(_tmpAvatar);
-            final String _tmpUrl;
-            if (_cursor.isNull(_cursorIndexOfUrl)) {
-              _tmpUrl = null;
+            final String _tmpHtml_url;
+            if (_cursor.isNull(_cursorIndexOfHtmlUrl)) {
+              _tmpHtml_url = null;
             } else {
-              _tmpUrl = _cursor.getString(_cursorIndexOfUrl);
+              _tmpHtml_url = _cursor.getString(_cursorIndexOfHtmlUrl);
             }
-            _item.setUrl(_tmpUrl);
             final String _tmpDescription;
             if (_cursor.isNull(_cursorIndexOfDescription)) {
               _tmpDescription = null;
             } else {
               _tmpDescription = _cursor.getString(_cursorIndexOfDescription);
             }
-            _item.setDescription(_tmpDescription);
-            final String _tmpLanguage;
-            if (_cursor.isNull(_cursorIndexOfLanguage)) {
-              _tmpLanguage = null;
+            final Boolean _tmpFork;
+            final Integer _tmp;
+            if (_cursor.isNull(_cursorIndexOfFork)) {
+              _tmp = null;
             } else {
-              _tmpLanguage = _cursor.getString(_cursorIndexOfLanguage);
+              _tmp = _cursor.getInt(_cursorIndexOfFork);
             }
-            _item.setLanguage(_tmpLanguage);
-            final String _tmpLanguageColor;
-            if (_cursor.isNull(_cursorIndexOfLanguageColor)) {
-              _tmpLanguageColor = null;
+            _tmpFork = _tmp == null ? null : _tmp != 0;
+            final String _tmpUrl;
+            if (_cursor.isNull(_cursorIndexOfUrl)) {
+              _tmpUrl = null;
             } else {
-              _tmpLanguageColor = _cursor.getString(_cursorIndexOfLanguageColor);
+              _tmpUrl = _cursor.getString(_cursorIndexOfUrl);
             }
-            _item.setLanguageColor(_tmpLanguageColor);
-            final Integer _tmpStars;
-            if (_cursor.isNull(_cursorIndexOfStars)) {
-              _tmpStars = null;
+            final String _tmpStatuses_url;
+            if (_cursor.isNull(_cursorIndexOfStatusesUrl)) {
+              _tmpStatuses_url = null;
             } else {
-              _tmpStars = _cursor.getInt(_cursorIndexOfStars);
+              _tmpStatuses_url = _cursor.getString(_cursorIndexOfStatusesUrl);
             }
-            _item.setStars(_tmpStars);
-            final Integer _tmpForks;
-            if (_cursor.isNull(_cursorIndexOfForks)) {
-              _tmpForks = null;
+            final String _tmpLanguages_url;
+            if (_cursor.isNull(_cursorIndexOfLanguagesUrl)) {
+              _tmpLanguages_url = null;
             } else {
-              _tmpForks = _cursor.getInt(_cursorIndexOfForks);
+              _tmpLanguages_url = _cursor.getString(_cursorIndexOfLanguagesUrl);
             }
-            _item.setForks(_tmpForks);
-            final Integer _tmpCurrentPeriodStars;
-            if (_cursor.isNull(_cursorIndexOfCurrentPeriodStars)) {
-              _tmpCurrentPeriodStars = null;
+            final String _tmpStargazers_url;
+            if (_cursor.isNull(_cursorIndexOfStargazersUrl)) {
+              _tmpStargazers_url = null;
             } else {
-              _tmpCurrentPeriodStars = _cursor.getInt(_cursorIndexOfCurrentPeriodStars);
+              _tmpStargazers_url = _cursor.getString(_cursorIndexOfStargazersUrl);
             }
-            _item.setCurrentPeriodStars(_tmpCurrentPeriodStars);
+            final String _tmpDownloads_url;
+            if (_cursor.isNull(_cursorIndexOfDownloadsUrl)) {
+              _tmpDownloads_url = null;
+            } else {
+              _tmpDownloads_url = _cursor.getString(_cursorIndexOfDownloadsUrl);
+            }
+            _item = new Repositories(_tmpId,_tmpNode_id,_tmpName,_tmpFull_name,_tmpHtml_url,_tmpDescription,_tmpFork,_tmpUrl,_tmpStatuses_url,_tmpLanguages_url,_tmpStargazers_url,_tmpDownloads_url);
             _result.add(_item);
           }
           return _result;

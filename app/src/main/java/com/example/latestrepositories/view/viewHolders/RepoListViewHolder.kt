@@ -12,22 +12,27 @@ import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.ShapeDrawable
 import androidx.appcompat.widget.AppCompatImageView
 import com.example.latestrepositories.R
+import com.example.latestrepositories.utils.goneView
 
 class RepoListViewHolder(v: View):RecyclerView.ViewHolder(v) {
     val title = v.findViewById<TextView>(com.example.latestrepositories.R.id.title)
     val desc = v.findViewById<TextView>(R.id.desc)
     val lang = v.findViewById<TextView>(R.id.lang)
     val starCount = v.findViewById<TextView>(R.id.star_count)
+    val starImg = v.findViewById<AppCompatImageView>(R.id.star_img)
     val langColor = v.findViewById<AppCompatImageView>(R.id.circle_icon)
 
     fun bind(obj: Repositories, position: Int){
         title.text = obj.name
         desc.text = obj.description
-        lang.text = obj.language
-        starCount.text = obj.stars.toString()
-        val drawable = itemView.context.resources.getDrawable(R.drawable.circle) as GradientDrawable
-        drawable.setColor(Color.parseColor(obj.languageColor))
-        langColor.setImageDrawable(drawable)
+//        lang.text = obj.language
+        lang.goneView()
+        starCount.goneView()
+        langColor.goneView()
+        starImg.goneView()
+//        val drawable = itemView.context.resources.getDrawable(R.drawable.circle) as GradientDrawable
+//        drawable.setColor(Color.parseColor(obj.languageColor))
+//        langColor.setImageDrawable(drawable)
 //        langColor.background.setColorFilter(Color.parseColor("#343434"), PorterDuff.Mode.SRC_ATOP)
 //        val background: Drawable = langColor.background
 //        val shapeDrawable = background as ShapeDrawable
