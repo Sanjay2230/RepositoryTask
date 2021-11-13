@@ -18,6 +18,9 @@ interface RepositoryDao {
     @Query("SELECT * FROM RepositoryTable")
     fun getRepoList(): LiveData<List<Repositories>>
 
+    @Query("SELECT ID FROM RepositoryTable ORDER BY ID DESC LIMIT 1")
+    fun getLastRecordId(): Int?
+
     @Query("DELETE FROM RepositoryTable")
     fun deleteAll()
 }

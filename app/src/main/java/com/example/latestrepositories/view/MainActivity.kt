@@ -49,7 +49,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
     private lateinit var repoListAdapter: RepoListAdapter
     private lateinit var repoList: ArrayList<Repositories>
     private lateinit var searchView: androidx.appcompat.widget.SearchView
-    val currentInt = 0
+    var currentInt = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -72,6 +72,9 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
         refreshLayout.setOnRefreshListener(this)
         refreshLayout.setColorSchemeResources(android.R.color.white)
         refreshLayout.setProgressBackgroundColorSchemeResource(R.color.blue_900)
+        repositoryViewModel.getLastRecordId {
+            currentInt = it ?: 0
+        }
         retry.setOnClickListener(this)
     }
 
@@ -80,6 +83,32 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
         repo_list.adapter = repoListAdapter
         repo_list.layoutManager = LinearLayoutManager(this)
         repo_list.addItemDecoration(DividerItemDecoration(this, VERTICAL))
+        repo_list.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (!recyclerView.canScrollVertically(1) && newState==RecyclerView.SCROLL_STATE_IDLE) {
+                    networkCall()
+                }
+            }
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val layoutManager = LinearLayoutManager::class.java.cast(repo_list.layoutManager)
+                val totalItemCount = layoutManager.itemCount
+                val lastVisible = layoutManager.findLastVisibleItemPosition()
+
+                val endHasBeenReached = lastVisible + 5 >= totalItemCount
+                if (totalItemCount > 0 && endHasBeenReached) {
+                    repoListAdapter.getLastItem(lastVisible, onSuccess = {
+                        currentInt = it
+                    })
+                }
+
+                val topRowVerticalPosition =
+                    if (recyclerView == null || recyclerView.childCount === 0) 0 else recyclerView.getChildAt(
+                        0
+                    ).top
+                refreshLayout.isEnabled = topRowVerticalPosition >= 0
+            }
+        })
         repoList = ArrayList()
         repositoryViewModel.getRepoList {
             it.observe(this, { v ->
@@ -102,18 +131,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
                     retry.goneView()
                     repo_list.showView()
                     refreshLayout.isRefreshing = false
-                    Log.d("Response", "OnScuccess: " + response.message())
-                    Log.d("Response", "OnScuccess: " + response.body().toString())
-//                    val jsonObj = JSONObject(response.body().toString())
-//                    val repoArratObj = jsonObj.getString("items")
-//                    val repolist = JSONArray(repoArratObj)
                     repositoryViewModel.insert(response.body()!!)
-                    /*repolist?.forEach { it ->
-                        val isExists = repositoryViewModel.isRecordExists(it.author!!, it.name!!, it.language!!)
-                        if(isExists == 0){
-                            repositoryViewModel.insert(it)
-                        }
-                    }*/
                 }
             }
 
@@ -125,6 +143,9 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
 
     override fun onRefresh() {
         if(isNetworkAvailable()){
+            repositoryViewModel.getLastRecordId {
+                currentInt = it ?: 0
+            }
             networkCall()
         }else{
             refreshLayout.isRefreshing = false
@@ -136,24 +157,6 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_repo,menu)
-        /*val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        searchView = menu!!.findItem(R.id.search_id).actionView as androidx.appcompat.widget.SearchView
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
-        searchView.maxWidth = Int.MAX_VALUE
-
-        searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String): Boolean {
-                // filter recycler view when query submitted
-                repoListAdapter.filter.filter(query)
-                return false
-            }
-
-            override fun onQueryTextChange(query: String): Boolean {
-                // filter recycler view when text is changed
-                repoListAdapter.filter.filter(query)
-                return false
-            }
-        })*/
         setSearchViewSetting(menu)
         return true
     }
@@ -165,15 +168,6 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onBackPressed() {
-        // close search view on back button pressed
-        if (!searchView.isIconified) {
-            searchView.isIconified = true
-            return
-        }
-        super.onBackPressed()
     }
 
     @SuppressLint("NewApi", "SoonBlockedPrivateApi")
@@ -219,7 +213,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
             }
 
             override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-                repoListAdapter.setData(repoList)
+//                repoListAdapter.setData(repoList)
                 return true
             }
         })
@@ -227,7 +221,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
         editText.doAfterTextChanged {
 
             if (!it.isNullOrBlank()) {
-                repoListAdapter.setData(repoList)
+//                repoListAdapter.setData(repoList)
                 repoListAdapter.filter.filter(it.toString())
             } else {
                 repoListAdapter.setData(repoList)

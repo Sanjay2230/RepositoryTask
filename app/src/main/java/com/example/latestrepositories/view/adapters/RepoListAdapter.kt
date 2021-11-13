@@ -35,6 +35,11 @@ class RepoListAdapter(val context: Context):RecyclerView.Adapter<RepoListViewHol
         notifyDataSetChanged()
     }
 
+    fun getLastItem(pos: Int, onSuccess:(lastItemId : Int) -> Unit){
+        val lastId = filteredrepoList[pos].id
+        onSuccess(lastId ?: 0)
+    }
+
     override fun getFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(charSequence: CharSequence): FilterResults {
@@ -46,7 +51,7 @@ class RepoListAdapter(val context: Context):RecyclerView.Adapter<RepoListViewHol
                     for (obj in repoList) {
 
                         // name match condition. this might differ depending on your requirement
-                        // here we are looking for name or phone number match
+                        // here we are looking for name
                         if (obj.name?.toLowerCase()?.contains(charString.toLowerCase()) == true) {
                             filteredList.add(obj)
                         }

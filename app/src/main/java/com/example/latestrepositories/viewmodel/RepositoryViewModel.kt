@@ -25,4 +25,13 @@ class RepositoryViewModel(application: Application):AndroidViewModel(application
             }
         }
     }
+
+    fun getLastRecordId(onSuccess: (id: Int?) -> Unit){
+        viewModelScope.launch {
+            val id = db.repositoryDao().getLastRecordId()
+            withContext((Dispatchers.Main)){
+                onSuccess(id)
+            }
+        }
+    }
 }
