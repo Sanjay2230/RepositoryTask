@@ -8,12 +8,12 @@
         "source": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/res/layout/content_activity_main.xml"
     },
     {
-        "merged": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/build/intermediates/merged_res/debug/drawable_divider.xml.flat",
         "source": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/res/drawable/divider.xml"
+    },
+    {
+        "merged": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/build/intermediates/merged_res/debug/font_open_sans_semibold.xml.flat",

@@ -54,7 +54,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         objectInitialization()
         showRepoList()
         if(isNetworkAvailable()){
@@ -191,8 +191,6 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
 
         editText.setTextColor(resources.getColor(R.color.black))
         editText.setHintTextColor(resources.getColor(R.color.black))
-        editText.inputType =
-            InputType.TYPE_TEXT_VARIATION_PERSON_NAME or InputType.TYPE_TEXT_FLAG_CAP_WORDS
         editText.hint = "Search by Name.."
         editText.isEnabled = true
 
@@ -213,7 +211,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
             }
 
             override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
-//                repoListAdapter.setData(repoList)
+                repoListAdapter.setData(repoList)
                 return true
             }
         })
