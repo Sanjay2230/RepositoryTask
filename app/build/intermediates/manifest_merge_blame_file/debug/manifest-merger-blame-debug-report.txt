@@ -32,74 +32,73 @@
 20-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:11:9-48
 21        android:screenOrientation="portrait"
 21-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:12:9-45
-22        android:testOnly="true"
-23        android:theme="@style/AppTheme" >
-23-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:13:9-40
-24        <activity
-24-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:14:9-33:20
-25            android:name="com.example.latestrepositories.view.MainActivity"
-25-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:15:13-46
-26            android:exported="true"
-26-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:20:13-36
-27            android:label="@string/trend_repo"
-27-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:16:13-47
-28            android:screenOrientation="portrait"
-28-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:17:13-49
-29            android:theme="@style/AppTheme.NoActionBar"
-29-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:18:13-56
-30            android:windowSoftInputMode="stateAlwaysHidden" >
-30-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:19:13-60
-31            <meta-data
-31-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:21:13-23:54
-32                android:name="android.app.searchable"
-32-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:22:17-54
-33                android:resource="@xml/searchable" />
-33-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:23:17-51
-34
-35            <intent-filter>
-35-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:25:13-27:29
-36                <action android:name="android.intent.action.SEARCH" />
-36-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:17-71
-36-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:25-68
-37            </intent-filter>
-38            <intent-filter>
-38-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:28:13-32:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:17-69
-39-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:17-77
-41-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:27-74
-42            </intent-filter>
-43        </activity>
-44
-45        <meta-data
-45-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:34:9-36:57
-46            android:name="preloaded_fonts"
-46-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:35:13-43
-47            android:resource="@array/preloaded_fonts" />
-47-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:36:13-54
-48
-49        <service
-49-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
-50            android:name="androidx.room.MultiInstanceInvalidationService"
-50-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
-51            android:directBootAware="true"
-51-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
-52            android:exported="false" />
-52-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
-53
-54        <provider
-54-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-55            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-55-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-56            android:authorities="com.example.latestrepositories.lifecycle-process"
-56-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-57            android:exported="false"
-57-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-58            android:multiprocess="true" />
-58-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-59    </application>
-60
-61</manifest>
+22        android:theme="@style/AppTheme" >
+22-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:13:9-40
+23        <activity
+23-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:14:9-33:20
+24            android:name="com.example.latestrepositories.view.MainActivity"
+24-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:15:13-46
+25            android:exported="true"
+25-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:20:13-36
+26            android:label="@string/trend_repo"
+26-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:16:13-47
+27            android:screenOrientation="portrait"
+27-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:17:13-49
+28            android:theme="@style/AppTheme.NoActionBar"
+28-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:18:13-56
+29            android:windowSoftInputMode="stateAlwaysHidden" >
+29-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:19:13-60
+30            <meta-data
+30-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:21:13-23:54
+31                android:name="android.app.searchable"
+31-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:22:17-54
+32                android:resource="@xml/searchable" />
+32-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:23:17-51
+33
+34            <intent-filter>
+34-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:25:13-27:29
+35                <action android:name="android.intent.action.SEARCH" />
+35-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:17-71
+35-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:25-68
+36            </intent-filter>
+37            <intent-filter>
+37-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:28:13-32:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:17-69
+38-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:17-77
+40-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <meta-data
+44-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:34:9-36:57
+45            android:name="preloaded_fonts"
+45-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:35:13-43
+46            android:resource="@array/preloaded_fonts" />
+46-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:36:13-54
+47
+48        <service
+48-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+49            android:name="androidx.room.MultiInstanceInvalidationService"
+49-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+50            android:directBootAware="true"
+50-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+51            android:exported="false" />
+51-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+52
+53        <provider
+53-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+54            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+54-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+55            android:authorities="com.example.latestrepositories.lifecycle-process"
+55-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+56            android:exported="false"
+56-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+57            android:multiprocess="true" />
+57-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+58    </application>
+59
+60</manifest>
