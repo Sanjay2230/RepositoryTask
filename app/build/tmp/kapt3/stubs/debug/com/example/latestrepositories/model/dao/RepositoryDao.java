@@ -11,7 +11,7 @@ public abstract interface RepositoryDao {
     java.util.List<com.example.latestrepositories.model.entity.Repositories> cats);
     
     @org.jetbrains.annotations.NotNull()
-    @androidx.room.Query(value = "SELECT * FROM RepositoryTable")
+    @androidx.room.Query(value = "SELECT * FROM RepositoryTable ORDER BY ID DESC")
     public abstract androidx.lifecycle.LiveData<java.util.List<com.example.latestrepositories.model.entity.Repositories>> getRepoList();
     
     @org.jetbrains.annotations.Nullable()
