@@ -58,6 +58,7 @@ class MainActivity : Utils(), SwipeRefreshLayout.OnRefreshListener, View.OnClick
                 error.showView()
                 retry.showView()
                 repo_list.goneView()
+
             }
         }
     }
