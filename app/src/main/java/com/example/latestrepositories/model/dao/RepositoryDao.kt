@@ -15,7 +15,7 @@ interface RepositoryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(cats: List<Repositories>)
 
-    @Query("SELECT * FROM RepositoryTable")
+    @Query("SELECT * FROM RepositoryTable ORDER BY ID DESC")
     fun getRepoList(): LiveData<List<Repositories>>
 
     @Query("SELECT ID FROM RepositoryTable ORDER BY ID DESC LIMIT 1")

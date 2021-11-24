@@ -6,100 +6,100 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml
+8-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml
+9-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:5:5-66
-11-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:5:22-64
+11-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:5:5-66
+11-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:6:5-78
-12-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:6:22-76
+12-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:6:5-78
+12-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:6:22-76
 13
 14    <application
-14-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:7:5-37:19
+14-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:7:5-37:19
 15        android:allowBackup="true"
-15-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:8:9-35
+15-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:8:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.7.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\4dfd8b15aa3fca473e5152361f0f3dea\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.7.0] /home/sanjay1/.gradle/caches/transforms-3/4dfd8b15aa3fca473e5152361f0f3dea/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:icon="@mipmap/ic_launcher"
-18-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:9:9-43
+18-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:9:9-43
 19        android:label="@string/app_name"
-19-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:10:9-41
+19-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:10:9-41
 20        android:roundIcon="@mipmap/ic_launcher"
-20-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:11:9-48
+20-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:11:9-48
 21        android:screenOrientation="portrait"
-21-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:12:9-45
+21-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:12:9-45
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
-23-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:13:9-40
+23-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:13:9-40
 24        <activity
-24-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:14:9-33:20
+24-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:14:9-33:20
 25            android:name="com.example.latestrepositories.view.MainActivity"
-25-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:15:13-46
+25-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:15:13-46
 26            android:exported="true"
-26-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:20:13-36
+26-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:20:13-36
 27            android:label="@string/trend_repo"
-27-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:16:13-47
+27-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:16:13-47
 28            android:screenOrientation="portrait"
-28-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:17:13-49
+28-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:17:13-49
 29            android:theme="@style/AppTheme.NoActionBar"
-29-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:18:13-56
+29-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:18:13-56
 30            android:windowSoftInputMode="stateAlwaysHidden" >
-30-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:19:13-60
+30-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:19:13-60
 31            <meta-data
-31-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:21:13-23:54
+31-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:21:13-23:54
 32                android:name="android.app.searchable"
-32-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:22:17-54
+32-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:22:17-54
 33                android:resource="@xml/searchable" />
-33-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:23:17-51
+33-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:23:17-51
 34
 35            <intent-filter>
-35-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:25:13-27:29
+35-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:25:13-27:29
 36                <action android:name="android.intent.action.SEARCH" />
-36-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:26:17-71
-36-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:26:25-68
+36-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:17-71
+36-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:26:25-68
 37            </intent-filter>
 38            <intent-filter>
-38-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:28:13-32:29
+38-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:28:13-32:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:29:17-69
-39-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:29:25-66
+39-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:17-69
+39-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:29:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:31:17-77
-41-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:31:27-74
+41-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:17-77
+41-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:31:27-74
 42            </intent-filter>
 43        </activity>
 44
 45        <meta-data
-45-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:34:9-36:57
+45-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:34:9-36:57
 46            android:name="preloaded_fonts"
-46-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:35:13-43
+46-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:35:13-43
 47            android:resource="@array/preloaded_fonts" />
-47-->C:\Users\Mohanbabu\AndroidStudioProjects\RepositoryTask\app\src\main\AndroidManifest.xml:36:13-54
+47-->/home/sanjay1/AndroidStudioProjects/RepositoryTask/app/src/main/AndroidManifest.xml:36:13-54
 48
 49        <service
-49-->[androidx.room:room-runtime:2.3.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\e3c0d5608905f277483c54bd331e69c7\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
+49-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 50            android:name="androidx.room.MultiInstanceInvalidationService"
-50-->[androidx.room:room-runtime:2.3.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\e3c0d5608905f277483c54bd331e69c7\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74
+50-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
 51            android:directBootAware="true"
-51-->[androidx.room:room-runtime:2.3.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\e3c0d5608905f277483c54bd331e69c7\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
+51-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
 52            android:exported="false" />
-52-->[androidx.room:room-runtime:2.3.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\e3c0d5608905f277483c54bd331e69c7\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
+52-->[androidx.room:room-runtime:2.3.0] /home/sanjay1/.gradle/caches/transforms-3/e3c0d5608905f277483c54bd331e69c7/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 53
 54        <provider
-54-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\d11249e03a1b765fdcf531a7f75d0f67\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+54-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 55            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-55-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\d11249e03a1b765fdcf531a7f75d0f67\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+55-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
 56            android:authorities="com.example.latestrepositories.lifecycle-process"
-56-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\d11249e03a1b765fdcf531a7f75d0f67\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+56-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
 57            android:exported="false"
-57-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\d11249e03a1b765fdcf531a7f75d0f67\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+57-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
 58            android:multiprocess="true" />
-58-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Mohanbabu\.gradle\caches\transforms-3\d11249e03a1b765fdcf531a7f75d0f67\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+58-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/sanjay1/.gradle/caches/transforms-3/d11249e03a1b765fdcf531a7f75d0f67/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
 59    </application>
 60
 61</manifest>

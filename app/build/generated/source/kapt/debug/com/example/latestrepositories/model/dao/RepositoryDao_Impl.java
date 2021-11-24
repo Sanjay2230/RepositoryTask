@@ -141,7 +141,7 @@ public final class RepositoryDao_Impl implements RepositoryDao {
 
   @Override
   public LiveData<List<Repositories>> getRepoList() {
-    final String _sql = "SELECT * FROM RepositoryTable";
+    final String _sql = "SELECT * FROM RepositoryTable ORDER BY ID DESC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"RepositoryTable"}, false, new Callable<List<Repositories>>() {
       @Override
